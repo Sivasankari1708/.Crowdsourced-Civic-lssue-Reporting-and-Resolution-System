@@ -10,6 +10,7 @@ const cors = require('cors'); // Import the cors package
 
 // Import the Mongoose model you created.
 const Report = require('./models/Report');
+const authRoutes = require('./routes/auth'); // ADDED: Import the auth routes file
 
 // Configure Cloudinary using the credentials from your .env file.
 cloudinary.config({
@@ -29,6 +30,7 @@ const PORT = process.env.PORT || 5000;
 // Middleware to parse JSON bodies from incoming requests.
 app.use(express.json());
 app.use(cors()); // Use the cors middleware here
+app.use('/api/auth', authRoutes); // ADDED: Connect the auth router to your app
 
 // Connect to MongoDB using the URI from your .env file.
 mongoose.connect(process.env.MONGODB_URI)
