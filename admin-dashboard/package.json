@@ -10,6 +10,7 @@
     "axios": "^1.12.2",
     "firebase": "^12.3.0",
     "framer-motion": "^12.23.16",
+    "helmet": "^8.1.0",
     "leaflet": "^1.9.4",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
